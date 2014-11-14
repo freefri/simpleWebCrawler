@@ -23,26 +23,14 @@ public class HtmlParserTest {
 
     @Test
     public void parse() throws Exception {
-        Map<String, List<String>> expected = new LinkedHashMap<String, List<String>>();
+        Map<String, List<String>> expectedMap = new LinkedHashMap<String, List<String>>();
         List<String> list = new ArrayList<String>();
         list.add("Load Balancer Health Test");
-        expected.put("header", list);
+        expectedMap.put("header", list);
 
         Map result = new HtmlParser().parse(exampleHtml, getRulesMap("//h1/text()"));
 
-        assertEquals(expected, result);
-    }
-
-    @Test
-    public void parseUsingRegex() throws Exception {
-        Map<String, List<String>> expected = new LinkedHashMap<String, List<String>>();
-        List<String> list = new ArrayList<String>();
-        list.add("Load Balancer Health Test");
-        expected.put("header", list);
-
-        Map result = new HtmlParser().parse(exampleHtml, getRulesMap("//h1/text()"));
-
-        assertEquals(expected, result);
+        assertEquals(expectedMap, result);
     }
 
     private Map<String, String> getRulesMap(String xpathExpression) {
