@@ -1,0 +1,20 @@
+<root>
+    <template>
+        <urls amount="1">
+            <url isCrawled="1" uri="http://54.72.118.190/pingtest.html"/>
+        </urls>
+        <elements amount="1">
+            <element title="header" xpath="//h1/text()"/>
+        </elements>
+    </template>
+    <template>
+        <urls amount="2">
+            <url isCrawled="0" uri="http://54.72.118.190/pingtest.html?v2"/>
+            <url isCrawled="1" uri="http://54.72.118.190/pingtest.html?v3"/>
+        </urls>
+        <elements amount="2">
+            <element title="header3" xpath="//h1/text()"/>
+            <element title="header2" xpath="//h2/text()"/>
+        </elements>
+    </template>
+</root>

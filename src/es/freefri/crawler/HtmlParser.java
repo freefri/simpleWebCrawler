@@ -23,7 +23,7 @@ public class HtmlParser {
         properties.setTranslateSpecialEntities(true);
         properties.setTransResCharsToNCR(true);
         properties.setOmitComments(true);
-        properties.setOmitUnknownTags(true);
+        properties.setOmitUnknownTags(false);
         properties.setUseCdataForScriptAndStyle(true);
         properties.setRecognizeUnicodeChars(true);
         return properties;
