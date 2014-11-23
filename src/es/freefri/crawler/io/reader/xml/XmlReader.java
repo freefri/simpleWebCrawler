@@ -13,12 +13,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class XmlReader extends FileReader {
+public class XmlReader extends FileReader implements es.freefri.crawler.io.reader.CrawlerReader {
 
     public XmlReader(String fileName) throws FileNotFoundException {
         super(fileName);
     }
 
+    @Override
     public List<UrlToCrawl> readAllUrlsToCrawl() throws IOException {
         BufferedReader br = new BufferedReader(this);
         HtmlParser parser = new HtmlParser();

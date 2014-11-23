@@ -13,6 +13,7 @@ public class XmlFile {
         fileContents = parsedFile;
     }
 
+    @SuppressWarnings("unchecked")
     public List<String> get(String key) throws InvalidFileFormat {
         Object o = fileContents.get(key);
         List<String> result = (List<String>) o;
